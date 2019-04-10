@@ -1,0 +1,15 @@
+{
+  "name": "awsnodecoin.docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blockChainServer.js",
+  "scripts": {
+    "start": "node blockChainServer.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "sha256": "^0.2.0"
+  }
+}
