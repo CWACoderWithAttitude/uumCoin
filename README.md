@@ -16,7 +16,7 @@ $> docker run -p 49153:8080 uumblockchainserver
 ```
 
 Then open localhost:49153 in your webbrowser.  
-Have a look the window where you started the docker image. You can see the new blocks as they're minded.  
+Have a look at the window where you started the docker image. You can see the new blocks as they're mined.  
 
 You can increaese the difficulty level and rebuild the image to get an impression of the mining performance.
 
