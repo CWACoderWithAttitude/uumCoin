@@ -1,5 +1,6 @@
 'use strict'
 const Block = require('./Block')
+const fs = require('fs')
 
 module.exports = class BlockChain {
   constructor(difficulty) {
@@ -17,5 +18,16 @@ module.exports = class BlockChain {
     block.calcHash()
     block.mineBlock(this.difficulty)
     this._chain.push(block)
+    this.saveChainToFile()
+  }
+
+  saveChainToFile(){
+    fs.writeFile('uumChain.json', JSON.stringify(this._chain), 'utf8', function (err) {
+      if (err) {
+        return console.log(err);
+      }
+
+    console.log("The file was saved!");
+    })
   }
 }
