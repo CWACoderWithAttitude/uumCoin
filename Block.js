@@ -60,7 +60,6 @@ module.exports = class Block {
     while (!ok) {
       var comp = this._hash.substring(0, difficulty).localeCompare(crit)
       if (comp === 0) {
-        console.log('gefunden')
         ok = true
       } else {
         this.nonce = this.nonce + 1

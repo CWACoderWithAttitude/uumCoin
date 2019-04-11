@@ -1,5 +1,5 @@
 {
-  "name": "awsnodecoin.docker",
+  "name": "uumcoin.docker",
   "version": "1.0.0",
   "description": "",
   "main": "blockChainServer.js",
