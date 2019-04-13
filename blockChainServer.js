@@ -11,6 +11,10 @@ const HOST = '0.0.0.0'
 const difficulty = 5
 // App
 const app = express()
+
+// https://stackoverflow.com/questions/5710358/how-to-retrieve-post-query-parameters
+app.use(require('body-parser').json())
+
 app.get('/', (req, res) => {
   var uumChain = new UuMChain(difficulty)
   uumChain.addBlock('{from: volker, to: taghreed, betrag: €4.50}')
@@ -20,5 +24,10 @@ app.get('/', (req, res) => {
   res.send('This is the Unterschied & Macher BlockChain:<br>' + JSON.stringify(uumChain))
 });
 
+app.post('/', (req, res) => {
+  const data=req.body.data
+  res.send('received post request, data=' + data)
+
+})
 app.listen(PORT, HOST)
 console.log(`Running on http://${HOST}:${PORT}`)
