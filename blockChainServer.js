@@ -31,5 +31,11 @@ app.post('/', (req, res) => {
   uumChain.addBlock(data)
 
 })
+
+app.get('/get', (req, res) => {
+  var uumChain = new UuMChain(difficulty)
+  const chain = uumChain._chain
+  res.send(JSON.stringify(chain))
+})
 app.listen(PORT, HOST)
 console.log(`Running on http://${HOST}:${PORT}`)
