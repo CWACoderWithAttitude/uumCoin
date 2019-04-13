@@ -27,6 +27,8 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const data=req.body.data
   res.send('received post request, data=' + data)
+  var uumChain = new UuMChain(difficulty)
+  uumChain.addBlock(data)
 
 })
 app.listen(PORT, HOST)
