@@ -47,7 +47,6 @@ module.exports = class Block {
 
   mineBlock(difficulty) {
     const builCrit = function(numberOfZeros) {
-      console.log('numberofzeros: ' + numberOfZeros)
       var crit = ''
       for (var i = 0; i < numberOfZeros; i++) {
         crit = crit + '0'
@@ -66,6 +65,6 @@ module.exports = class Block {
         this.calcHash()
       }
     }
-    console.log('BLOCK MINED:' + this._hash)
+    console.log('BLOCK MINED:' + this._hash + "\nnonce: " + this.nonce)
   }
 }
