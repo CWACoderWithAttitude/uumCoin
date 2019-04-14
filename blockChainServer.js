@@ -12,6 +12,9 @@ const difficulty = 5
 // App
 const app = express()
 
+//  express: set status code
+//   https://stackoverflow.com/questions/26066785/proper-way-to-set-response-status-and-json-content-in-a-rest-api-made-with-nodej
+
 // https://stackoverflow.com/questions/5710358/how-to-retrieve-post-query-parameters
 app.use(require('body-parser').json())
 
@@ -26,10 +29,10 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   const data=req.body.data
-  res.send('received post request, data=' + data)
+  
   var uumChain = new UuMChain(difficulty)
   uumChain.addBlock(data)
-
+  res.status(201).send('received post request, data=' + data)
 })
 
 app.get('/get', (req, res) => {
