@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
+    "body-parser": "^1.20.6",
+    "express": "^4.22.2",
     "fs": "0.0.1-security",
     "nyc": "^14.0.0",
     "sha256": "^0.2.0"
